@@ -2,7 +2,7 @@
 //get text , invert the text as it would in the mirrow, print the text and the mirrow
 
 //P: only strings,
-//console,
+//R: console,
 //E
 
 function mirrow(str){
@@ -35,3 +35,13 @@ function mirrow(str){
 // mirrow('Having fun')  *********
                     //   * ginvaH *
                     //   * nuf    *
+
+
+////////////Other solution ///////
+function mirror(s){
+    let a = s.split(' ');
+    console.log(a)
+    let m = Math.max(...a.map(x=>x.length));
+    a = a.map(x=>'* '+[...x].reverse().join('')+' '.repeat(m-x.length)+' *');
+    return ['*'.repeat(m+4),...a,'*'.repeat(m+4)].join('\n');
+  }
