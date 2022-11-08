@@ -54,3 +54,25 @@ function connectedSum(graphNodes, graphFrom, graphTo) {
   }
   
   console.log(miniMaxSum([3,2,5, 4, 1]))
+
+
+  //To Complete 
+
+  var minStickers = function(stickers, target) {
+    let count =0
+    let targ =target.split('')
+    for(let i=0;i<stickers.length;i++){
+      let sticks = stickers[i].split('')
+      for(let j=0; j<targ.length;j++){
+        if(sticks.includes(targ[j])){
+          targ.splice(j,1)     
+          console.log(j,sticks,targ)
+        }
+      }
+      // if(target.length == i){
+      //   break
+      // }
+    }
+    return count
+};
+console.log(minStickers(['with','example','science'],'thehat'))
