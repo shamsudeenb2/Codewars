@@ -42,7 +42,6 @@ function isPalindrome(arr){
   console.log("isPalidrome: " + condition);
  }
 function checkIsPalindrome(head) {
-
 var slow = head;
     let ispalin = true;
     let stack = [];
