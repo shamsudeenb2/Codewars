@@ -16,3 +16,22 @@ function miniMaxSum(arr) {
   }
   
   console.log(miniMaxSum([3,2,5, 4, 1]))
+
+
+  //Review solution
+  
+function minMax(arr){
+  let min= sum(arr,'min')
+   let max=sum(arr, 'max')
+   
+   return `${min} ${max}`
+ }
+ function sum(ar,minMax){
+   let ini=0
+   let arMin=[...ar]
+   arMin.sort()
+   if(minMax==='min') arMin.pop()
+   if(minMax==='max') arMin.shift()
+   return arMin.reduce((acc,pre)=> acc+pre, ini)
+ }
+ console.log(minMax([1,9,7,5,3]))
